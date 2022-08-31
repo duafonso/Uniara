@@ -17,6 +17,6 @@ int main(void)
     printf("\n O número 1 possui o valor %d e assim é o maior",n1);
     if(n2 >= n1 and n2 >= n3)
     printf("\n O número 2 possui o valor %d e assim é o maior",n2);  
-    if(n3 >= n1 and n1 >= 2)
+    if(n3 >= n1 and n1 >= n2)
     printf("\n O número 3 possui o valor %d e assim é o maior",n3);
 }
