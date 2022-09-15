@@ -107,7 +107,6 @@ void Ex5()
    	int pg=((prime_termo*(pow(razao_termo,quant_termo)-1))/(razao_termo-1));
     printf("\n A soma dos termos da Progressão Geométrica é: %d",pg);
 }
-
 void Ex6()
 {
 	//	6. Em uma eleição para prefeito concorrem 3 candidatos. Cada candidato é identificado
@@ -122,7 +121,61 @@ void Ex6()
 	//	a. Percentual de votos de cada candidato
 	//	b. Percentual de eleitores indecisos
 	//	c. Percentual de votos brancos e nulos
-
+	int candidato=0,candidato_1=0,candidato_2=0,candidato_3=0; 
+	int v_brancos=0,v_nulos=0,v_indecisos=0,v_total=0;
+	int p_c1=0,p_c2=0,p_c3=0,p_nu=0,p_in=0,p_br=0;
+	int contador=5;
+	printf("\n 1 para Candidato José");
+	printf("\n 2 para Candidato Lucas");
+	printf("\n 3 para Candidato Ricardo");
+	printf("\n 5 para Voto Nulo");
+	printf("\n 6 para Indeciso");
+	printf("\n 0 para Voto em Branco");
+	while(contador > 0){
+		printf("\n Informe um código:");
+		scanf("%d",&candidato);
+		contador--;
+		switch(candidato){
+		case 1:
+			v_total++;
+			candidato_1++;
+		break;
+		case 2:
+			v_total++;
+			candidato_2++;
+		break;
+		case 3:
+			v_total++;
+			candidato_3++;
+		break;
+		case 5:
+			v_total++;
+			v_nulos++;
+		break;
+		case 6:
+			v_total++;
+			v_indecisos++;
+		break;
+		case 0:
+			v_total++;
+			v_brancos++;
+		break;
+		default:
+			printf("\n Opção não encontrada");
+	}
+	int p_c1=((candidato_1/v_total)*100);
+	int p_c2=((candidato_2/v_total)*100);
+	int p_c3=((candidato_3/v_total)*100);
+	int p_nu=((v_nulos/v_total)*100);
+	int p_in=((v_indecisos/v_total)*100);
+	int p_br=((v_brancos/v_total)*100);
+	}
+	printf("\n Houve %d votos no Candidato José, representando %d por cento de %d votos",candidato_1,p_c1,v_total);
+	printf("\n Houve %d votos no Candidato Lucas, representando %d por cento de %d votos",candidato_2,p_c2,v_total);
+	printf("\n Houve %d votos no Candidato Ricardo, representando %d por cento de %d votos",candidato_3,p_c3,v_total);
+	printf("\n Houve %d votos como Nulo, representando %d por cento de %d votos",v_nulos,p_nu,v_total);
+	printf("\n Houve %d votos como Indeciso, representando %d por cento de %d votos",v_indecisos,p_in,v_total);
+	printf("\n Houve %d votos como Em Branco, representando %d por cento de %d votos",v_brancos,p_br,v_total);
 }
 void Ex7()
 {
