@@ -11,3 +11,7 @@
 // C. Qual o maior consumo dos últimos 20 anos
 // D. Qual o ano de menor consumo de energia
 
+int main(void)
+{ 
+    setlocale(LC_ALL, "Portuguese");
+}
