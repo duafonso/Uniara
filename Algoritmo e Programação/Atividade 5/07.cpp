@@ -9,4 +9,20 @@
 int main(void)
 { 
     setlocale(LC_ALL, "Portuguese");
+    
+    int vetor[5];
+    int contador;
+    
+    printf("\n Sequência: ");
+    for(contador=0;contador<5;contador++)
+    {
+    	vetor[contador] = rand()%5;
+    	printf("[%d]",vetor[contador]);
+	}
+	
+	printf("\n Sequência Invertida: ");
+	for(contador=4;contador>=0;contador--)
+	{
+		printf("[%d]",vetor[contador]);
+	}
 }
