@@ -1,28 +1,30 @@
-
 #include <stdio.h>    
 #include <stdlib.h>
 #include <locale.h>
+
+// Gabriel Augusto de Souza Morais
+// 5. Faça um programa em C que armanzene um número inteiro de até 3 digitos (até 999) e
+// determine a soma de seus dígitos. Ex: 397 -> 3 + 9 + 7 = 19.
+
 int main(void)
 { 
+	setlocale(LC_ALL, "Portuguese");
+
 	int numero;
 	int soma;
-	printf("\n Informe um número entre 100 a 999:");
+
+	printf("\n Digite um número entre 100 a 999:");
 	scanf("%d",&numero);
-	if(numero >= 100 && numero <= 999){
-	// Exemplo - Entrada de 415
-	while( numero > 0 )
-    {
-    	// Usar o operador aritmético de módulo % 
-        soma = soma + (numero % 10);
-        // 415 % 10 = 5
-        // 41 % 1 = 1
-        // 4 % 1 = 4
-        numero = numero / 10;
-        // 415 / 10 = 41
-        // 41 / 10 = 4
-        // 4 / 10 = 0.4
-    }
-	printf("\n A soma dos digitos das casas do número %d é %d", numero, soma);	
-	} else
-		printf("\n O número informado está inválido");
+
+	if(numero >= 100 && numero <= 999)
+	{
+		while( numero > 0 )
+		{
+			soma = soma + (numero % 10);
+			numero = numero / 10;
+		}
+	printf("\n Soma: [%d]",soma);	
+	} 
+	else
+		printf("\n Digite outro número válido.");
 }
